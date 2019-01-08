@@ -1,0 +1,23 @@
+	
+MainForm : btnAddStock,btnProduct,btnSale,btnExit,panelShow
+
+tabProduct : btnAddProduct,btnEditProduct,btnDeleteProduct,btnSearchProduct,panelShow(646, 538),panelMenu
+
+tabAddProduct : txtId,txtName,txtPrice,picProduct,rdbHaveBarcode,rdbNoBarcode,btnBrowse,btnClear,btnAdd       panel(646, 538)
+
+tabEditProduct : txtId,txtName,txtPrice,picProduct,btnSearch,btnBrowse,btnClear,btnEdit			      panel(646, 538)
+
+tabDeleteProduct : txtId,txtName,txtPrice,picProduct,btnSearch,btnClear,btnDelete			      panel(646, 538)
+
+tabSearchProduct : txtId,btnSearch,btnRefresh,picProudct,dataGridView1(colId,colName,colPrice,colImage)       panel(646, 538)
+
+tabAddStock : txtId,txtName,txtQty,btnSearch,btnAdd,btnNew,btnDelete,btnSave,btnSearch,picProduct,dataGridView1(colId,colName,colPrice,colQty)   panel(646, 656)
+
+tabSale : lblDate,dataGridView1(colName,colUnitPrice,colQty,colTotal),btnSave,txtTotal 			      panel(646, 656)
+
+
+
+     		 Size			Location
+
+
+panel Show   622, 592

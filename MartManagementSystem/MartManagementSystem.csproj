@@ -33,8 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\Admin\Downloads\Compressed\Bunifu_UI_v1.52\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +50,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="tabAddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabAddProduct.Designer.cs">
+      <DependentUpon>tabAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabAddStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabAddStock.Designer.cs">
+      <DependentUpon>tabAddStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabDeleteProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabDeleteProduct.Designer.cs">
+      <DependentUpon>tabDeleteProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabEditProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabEditProduct.Designer.cs">
+      <DependentUpon>tabEditProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabLoading.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabLoading.Designer.cs">
+      <DependentUpon>tabLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabProduct.Designer.cs">
+      <DependentUpon>tabProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +94,39 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tabSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabSale.Designer.cs">
+      <DependentUpon>tabSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tabSearchProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tabSearchProduct.Designer.cs">
+      <DependentUpon>tabSearchProduct.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="tabAddProduct.resx">
+      <DependentUpon>tabAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabAddStock.resx">
+      <DependentUpon>tabAddStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabDeleteProduct.resx">
+      <DependentUpon>tabDeleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabEditProduct.resx">
+      <DependentUpon>tabEditProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabLoading.resx">
+      <DependentUpon>tabLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabProduct.resx">
+      <DependentUpon>tabProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +136,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="tabSale.resx">
+      <DependentUpon>tabSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tabSearchProduct.resx">
+      <DependentUpon>tabSearchProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
