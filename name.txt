@@ -14,10 +14,3 @@ tabSearchProduct : txtId,btnSearch,btnRefresh,picProudct,dataGridView1(colId,col
 tabAddStock : txtId,txtName,txtQty,btnSearch,btnAdd,btnNew,btnDelete,btnSave,btnSearch,picProduct,dataGridView1(colId,colName,colPrice,colQty)   panel(646, 656)
 
 tabSale : lblDate,dataGridView1(colName,colUnitPrice,colQty,colTotal),btnSave,txtTotal 			      panel(646, 656)
-
-
-
-     		 Size			Location
-
-
-panel Show   622, 592

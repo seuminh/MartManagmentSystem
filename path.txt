@@ -1,1 +1,1 @@
-Desktop/MartManagementSystem
+/mnt/c/Users/Admin/Desktop/MartManagementSystem
