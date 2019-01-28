@@ -41,7 +41,6 @@
             this.txtName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.tabLoading1 = new MartManagementSystem.tabLoading();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +49,6 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.tabLoading1);
             this.bunifuGradientPanel1.Controls.Add(this.btnSearch);
             this.bunifuGradientPanel1.Controls.Add(this.btnDelete);
             this.bunifuGradientPanel1.Controls.Add(this.btnClear);
@@ -91,6 +89,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(88, 45);
             this.btnSearch.TabIndex = 38;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -116,6 +115,7 @@
             this.btnDelete.Size = new System.Drawing.Size(123, 49);
             this.btnDelete.TabIndex = 35;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -141,6 +141,7 @@
             this.btnClear.Size = new System.Drawing.Size(123, 49);
             this.btnClear.TabIndex = 34;
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtId
             // 
@@ -161,6 +162,8 @@
             this.txtId.Size = new System.Drawing.Size(190, 39);
             this.txtId.TabIndex = 33;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // picProduct
             // 
@@ -259,14 +262,6 @@
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "ID";
             // 
-            // tabLoading1
-            // 
-            this.tabLoading1.BackColor = System.Drawing.SystemColors.Window;
-            this.tabLoading1.Location = new System.Drawing.Point(264, 164);
-            this.tabLoading1.Name = "tabLoading1";
-            this.tabLoading1.Size = new System.Drawing.Size(101, 109);
-            this.tabLoading1.TabIndex = 40;
-            // 
             // tabDeleteProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,6 +292,5 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtName;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private tabLoading tabLoading1;
     }
 }

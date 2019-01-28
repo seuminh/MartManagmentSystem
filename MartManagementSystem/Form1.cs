@@ -12,13 +12,15 @@ namespace MartManagementSystem
 {
     public partial class MainForm : Form
     {
-        tabProduct product = new tabProduct();
-        tabAddStock addStock = new tabAddStock();
-        tabSale sale = new tabSale();
+        tabProduct product;
+        tabAddStock addStock;
+        tabSale sale;
 
         public MainForm()
         {
             InitializeComponent();
+            //MartManagementSystem.Properties.Settings.Default.ProNoBarcode = 1;
+            //MartManagementSystem.Properties.Settings.Default.Save();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -29,6 +31,7 @@ namespace MartManagementSystem
         private void btnAddStock_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            addStock = new tabAddStock();
             panelShow.Controls.Add(addStock);
             addStock.BringToFront();
         }
@@ -36,6 +39,7 @@ namespace MartManagementSystem
         private void btnProduct_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            product = new tabProduct();
             panelShow.Controls.Add(product);
             product.BringToFront();
         }
@@ -43,6 +47,7 @@ namespace MartManagementSystem
         private void btnSale_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            sale = new tabSale();
             panelShow.Controls.Add(sale);
             sale.BringToFront();
         }

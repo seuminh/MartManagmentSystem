@@ -52,7 +52,6 @@
             this.ColQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tabLoading1 = new MartManagementSystem.tabLoading();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -63,7 +62,6 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.SystemColors.Window;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.tabLoading1);
             this.bunifuGradientPanel1.Controls.Add(this.btnDelete);
             this.bunifuGradientPanel1.Controls.Add(this.btnSave);
             this.bunifuGradientPanel1.Controls.Add(this.btnAdd);
@@ -112,6 +110,7 @@
             this.btnDelete.Size = new System.Drawing.Size(90, 41);
             this.btnDelete.TabIndex = 30;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
@@ -137,6 +136,7 @@
             this.btnSave.Size = new System.Drawing.Size(90, 41);
             this.btnSave.TabIndex = 29;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
@@ -162,6 +162,7 @@
             this.btnAdd.Size = new System.Drawing.Size(90, 41);
             this.btnAdd.TabIndex = 28;
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnNew
             // 
@@ -187,6 +188,7 @@
             this.btnNew.Size = new System.Drawing.Size(90, 41);
             this.btnNew.TabIndex = 27;
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // txtQty
             // 
@@ -207,6 +209,7 @@
             this.txtQty.Size = new System.Drawing.Size(194, 29);
             this.txtQty.TabIndex = 26;
             this.txtQty.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
             // 
             // label3
             // 
@@ -285,6 +288,7 @@
             this.btnSearch.Size = new System.Drawing.Size(90, 41);
             this.btnSearch.TabIndex = 22;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtId
             // 
@@ -305,6 +309,8 @@
             this.txtId.Size = new System.Drawing.Size(194, 29);
             this.txtId.TabIndex = 21;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // label1
             // 
@@ -357,6 +363,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(549, 328);
             this.dataGridView1.TabIndex = 18;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // ColId
             // 
@@ -399,14 +406,6 @@
             this.bunifuDragControl2.TargetControl = this;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // tabLoading1
-            // 
-            this.tabLoading1.BackColor = System.Drawing.SystemColors.Window;
-            this.tabLoading1.Location = new System.Drawing.Point(264, 311);
-            this.tabLoading1.Name = "tabLoading1";
-            this.tabLoading1.Size = new System.Drawing.Size(101, 109);
-            this.tabLoading1.TabIndex = 31;
-            // 
             // tabAddStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,6 +414,7 @@
             this.Name = "tabAddStock";
             this.Size = new System.Drawing.Size(646, 656);
             this.Load += new System.EventHandler(this.tabAddStock_Load);
+            this.Leave += new System.EventHandler(this.tabAddStock_Leave);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
@@ -445,6 +445,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColQty;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private tabLoading tabLoading1;
     }
 }

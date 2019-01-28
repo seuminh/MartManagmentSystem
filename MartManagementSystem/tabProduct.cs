@@ -12,10 +12,10 @@ namespace MartManagementSystem
 {
     public partial class tabProduct : UserControl
     {
-        tabAddProduct addProduct = new tabAddProduct();
-        tabEditProduct editProduct = new tabEditProduct();
-        tabDeleteProduct deleteProduct = new tabDeleteProduct();
-        tabSearchProduct searchProduct = new tabSearchProduct();
+        tabAddProduct addProduct;
+        tabEditProduct editProduct;
+        tabDeleteProduct deleteProduct;
+        tabSearchProduct searchProduct;
 
         public tabProduct()
         {
@@ -30,6 +30,7 @@ namespace MartManagementSystem
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            addProduct = new tabAddProduct();
             panelShow.Controls.Add(addProduct);
             addProduct.BringToFront();
         }
@@ -37,6 +38,7 @@ namespace MartManagementSystem
         private void btnEditProduct_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            editProduct = new tabEditProduct();
             panelShow.Controls.Add(editProduct);
             editProduct.BringToFront();
         }
@@ -44,6 +46,7 @@ namespace MartManagementSystem
         private void btnDeleteProduct_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            deleteProduct = new tabDeleteProduct();
             panelShow.Controls.Add(deleteProduct);
             deleteProduct.BringToFront();
         }
@@ -51,6 +54,7 @@ namespace MartManagementSystem
         private void btnSearchProduct_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
+            searchProduct = new tabSearchProduct();
             panelShow.Controls.Add(searchProduct);
             searchProduct.BringToFront();
         }

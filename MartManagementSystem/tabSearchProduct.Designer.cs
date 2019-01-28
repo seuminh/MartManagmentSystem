@@ -42,7 +42,6 @@
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colImage = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabLoading1 = new MartManagementSystem.tabLoading();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -77,7 +76,7 @@
             this.btnRefresh.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnRefresh.ActiveForecolor = System.Drawing.Color.White;
             this.btnRefresh.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.Window;
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Control;
             this.btnRefresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRefresh.BackgroundImage")));
             this.btnRefresh.ButtonText = "Refresh";
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -94,6 +93,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(90, 41);
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // picProduct
             // 
@@ -113,7 +113,7 @@
             this.btnSearch.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnSearch.ActiveForecolor = System.Drawing.Color.White;
             this.btnSearch.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSearch.BackColor = System.Drawing.SystemColors.Control;
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.ButtonText = "Search";
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -130,6 +130,7 @@
             this.btnSearch.Size = new System.Drawing.Size(90, 41);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtId
             // 
@@ -150,6 +151,8 @@
             this.txtId.Size = new System.Drawing.Size(194, 29);
             this.txtId.TabIndex = 3;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // label1
             // 
@@ -202,6 +205,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(549, 328);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // colId
             // 
@@ -230,19 +234,10 @@
             this.colImage.ReadOnly = true;
             this.colImage.Width = 140;
             // 
-            // tabLoading1
-            // 
-            this.tabLoading1.BackColor = System.Drawing.SystemColors.Window;
-            this.tabLoading1.Location = new System.Drawing.Point(264, 164);
-            this.tabLoading1.Name = "tabLoading1";
-            this.tabLoading1.Size = new System.Drawing.Size(101, 109);
-            this.tabLoading1.TabIndex = 41;
-            // 
             // tabSearchProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tabLoading1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "tabSearchProduct";
             this.Size = new System.Drawing.Size(646, 538);
@@ -268,6 +263,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImage;
-        private tabLoading tabLoading1;
     }
 }

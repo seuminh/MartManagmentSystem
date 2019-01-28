@@ -37,7 +37,6 @@
             this.btnProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddStock = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelShow = new System.Windows.Forms.Panel();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -214,13 +213,6 @@
             this.panelShow.Size = new System.Drawing.Size(646, 656);
             this.panelShow.TabIndex = 1;
             // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panelShow;
-            this.bunifuDragControl1.Vertical = true;
-            // 
             // bunifuDragControl2
             // 
             this.bunifuDragControl2.Fixed = true;
@@ -253,7 +245,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnProduct;
         private System.Windows.Forms.Panel panelShow;
         private Bunifu.Framework.UI.BunifuFlatButton btnExit;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
     }
 }

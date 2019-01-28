@@ -93,6 +93,7 @@
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.Size = new System.Drawing.Size(88, 45);
             this.btnBrowse.TabIndex = 36;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // btnAdd
             // 
@@ -101,7 +102,7 @@
             this.btnAdd.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnAdd.ActiveForecolor = System.Drawing.Color.White;
             this.btnAdd.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAdd.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.Control;
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.ButtonText = "Add";
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -118,6 +119,7 @@
             this.btnAdd.Size = new System.Drawing.Size(123, 49);
             this.btnAdd.TabIndex = 35;
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -126,7 +128,7 @@
             this.btnClear.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnClear.ActiveForecolor = System.Drawing.Color.White;
             this.btnClear.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnClear.BackColor = System.Drawing.SystemColors.Window;
+            this.btnClear.BackColor = System.Drawing.SystemColors.Control;
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.ButtonText = "Clear";
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -143,6 +145,7 @@
             this.btnClear.Size = new System.Drawing.Size(123, 49);
             this.btnClear.TabIndex = 34;
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtId
             // 
@@ -163,6 +166,8 @@
             this.txtId.Size = new System.Drawing.Size(190, 39);
             this.txtId.TabIndex = 33;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtId_KeyDown);
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // picProduct
             // 
@@ -205,6 +210,7 @@
             this.txtPrice.Size = new System.Drawing.Size(190, 39);
             this.txtPrice.TabIndex = 30;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // bunifuCustomLabel3
             // 
@@ -260,6 +266,7 @@
             this.rdbNoBarcode.TabStop = true;
             this.rdbNoBarcode.Text = "No Barcode";
             this.rdbNoBarcode.UseVisualStyleBackColor = false;
+            this.rdbNoBarcode.CheckedChanged += new System.EventHandler(this.rdbNoBarcode_CheckedChanged);
             // 
             // rdbHaveBarcode
             // 
@@ -273,6 +280,7 @@
             this.rdbHaveBarcode.TabStop = true;
             this.rdbHaveBarcode.Text = "Have Barcode";
             this.rdbHaveBarcode.UseVisualStyleBackColor = false;
+            this.rdbHaveBarcode.CheckedChanged += new System.EventHandler(this.rdbHaveBarcode_CheckedChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -292,6 +300,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "tabAddProduct";
             this.Size = new System.Drawing.Size(592, 514);
+            this.Load += new System.EventHandler(this.tabAddProduct_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
