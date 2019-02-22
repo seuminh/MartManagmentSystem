@@ -34,9 +34,10 @@
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSearchProduct = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDeleteProduct = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEditProduct = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddProduct = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEditProduct = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDeleteProduct = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panelShow.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             // 
             this.panelShow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelShow.BackgroundImage")));
             this.panelShow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelShow.Controls.Add(this.btnDeleteProduct);
             this.panelShow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelShow.GradientBottomLeft = System.Drawing.Color.White;
             this.panelShow.GradientBottomRight = System.Drawing.Color.White;
@@ -67,7 +69,6 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.panelMenu.Controls.Add(this.btnSearchProduct);
             this.panelMenu.Controls.Add(this.btnAddProduct);
-            this.panelMenu.Controls.Add(this.btnDeleteProduct);
             this.panelMenu.Controls.Add(this.btnEditProduct);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -111,78 +112,6 @@
             this.btnSearchProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchProduct.Click += new System.EventHandler(this.btnSearchProduct_Click);
             // 
-            // btnDeleteProduct
-            // 
-            this.btnDeleteProduct.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
-            this.btnDeleteProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.btnDeleteProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeleteProduct.BorderRadius = 0;
-            this.btnDeleteProduct.ButtonText = "      Delete";
-            this.btnDeleteProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteProduct.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDeleteProduct.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteProduct.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDeleteProduct.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteProduct.Iconimage")));
-            this.btnDeleteProduct.Iconimage_right = null;
-            this.btnDeleteProduct.Iconimage_right_Selected = null;
-            this.btnDeleteProduct.Iconimage_Selected = null;
-            this.btnDeleteProduct.IconMarginLeft = 0;
-            this.btnDeleteProduct.IconMarginRight = 0;
-            this.btnDeleteProduct.IconRightVisible = true;
-            this.btnDeleteProduct.IconRightZoom = 0D;
-            this.btnDeleteProduct.IconVisible = true;
-            this.btnDeleteProduct.IconZoom = 50D;
-            this.btnDeleteProduct.IsTab = false;
-            this.btnDeleteProduct.Location = new System.Drawing.Point(328, 39);
-            this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.btnDeleteProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
-            this.btnDeleteProduct.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDeleteProduct.selected = false;
-            this.btnDeleteProduct.Size = new System.Drawing.Size(116, 48);
-            this.btnDeleteProduct.TabIndex = 6;
-            this.btnDeleteProduct.Text = "      Delete";
-            this.btnDeleteProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDeleteProduct.Textcolor = System.Drawing.Color.White;
-            this.btnDeleteProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
-            // 
-            // btnEditProduct
-            // 
-            this.btnEditProduct.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
-            this.btnEditProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(98)))), ((int)(((byte)(117)))));
-            this.btnEditProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditProduct.BorderRadius = 0;
-            this.btnEditProduct.ButtonText = "      Edit";
-            this.btnEditProduct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditProduct.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEditProduct.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEditProduct.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEditProduct.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEditProduct.Iconimage")));
-            this.btnEditProduct.Iconimage_right = null;
-            this.btnEditProduct.Iconimage_right_Selected = null;
-            this.btnEditProduct.Iconimage_Selected = null;
-            this.btnEditProduct.IconMarginLeft = 0;
-            this.btnEditProduct.IconMarginRight = 0;
-            this.btnEditProduct.IconRightVisible = true;
-            this.btnEditProduct.IconRightZoom = 0D;
-            this.btnEditProduct.IconVisible = true;
-            this.btnEditProduct.IconZoom = 50D;
-            this.btnEditProduct.IsTab = false;
-            this.btnEditProduct.Location = new System.Drawing.Point(193, 39);
-            this.btnEditProduct.Name = "btnEditProduct";
-            this.btnEditProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(98)))), ((int)(((byte)(117)))));
-            this.btnEditProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
-            this.btnEditProduct.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEditProduct.selected = false;
-            this.btnEditProduct.Size = new System.Drawing.Size(116, 48);
-            this.btnEditProduct.TabIndex = 5;
-            this.btnEditProduct.Text = "      Edit";
-            this.btnEditProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditProduct.Textcolor = System.Drawing.Color.White;
-            this.btnEditProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
-            // 
             // btnAddProduct
             // 
             this.btnAddProduct.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(227)))), ((int)(((byte)(116)))));
@@ -219,6 +148,79 @@
             this.btnAddProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
+            // btnEditProduct
+            // 
+            this.btnEditProduct.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
+            this.btnEditProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(98)))), ((int)(((byte)(117)))));
+            this.btnEditProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditProduct.BorderRadius = 0;
+            this.btnEditProduct.ButtonText = "      Edit";
+            this.btnEditProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditProduct.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEditProduct.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEditProduct.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEditProduct.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEditProduct.Iconimage")));
+            this.btnEditProduct.Iconimage_right = null;
+            this.btnEditProduct.Iconimage_right_Selected = null;
+            this.btnEditProduct.Iconimage_Selected = null;
+            this.btnEditProduct.IconMarginLeft = 0;
+            this.btnEditProduct.IconMarginRight = 0;
+            this.btnEditProduct.IconRightVisible = true;
+            this.btnEditProduct.IconRightZoom = 0D;
+            this.btnEditProduct.IconVisible = true;
+            this.btnEditProduct.IconZoom = 50D;
+            this.btnEditProduct.IsTab = false;
+            this.btnEditProduct.Location = new System.Drawing.Point(257, 39);
+            this.btnEditProduct.Name = "btnEditProduct";
+            this.btnEditProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(98)))), ((int)(((byte)(117)))));
+            this.btnEditProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(166)))), ((int)(((byte)(157)))));
+            this.btnEditProduct.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEditProduct.selected = false;
+            this.btnEditProduct.Size = new System.Drawing.Size(116, 48);
+            this.btnEditProduct.TabIndex = 5;
+            this.btnEditProduct.Text = "      Edit";
+            this.btnEditProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEditProduct.Textcolor = System.Drawing.Color.White;
+            this.btnEditProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProduct.Click += new System.EventHandler(this.btnEditProduct_Click);
+            // 
+            // btnDeleteProduct
+            // 
+            this.btnDeleteProduct.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+            this.btnDeleteProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.btnDeleteProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteProduct.BorderRadius = 0;
+            this.btnDeleteProduct.ButtonText = "      Delete";
+            this.btnDeleteProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteProduct.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeleteProduct.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDeleteProduct.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeleteProduct.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteProduct.Iconimage")));
+            this.btnDeleteProduct.Iconimage_right = null;
+            this.btnDeleteProduct.Iconimage_right_Selected = null;
+            this.btnDeleteProduct.Iconimage_Selected = null;
+            this.btnDeleteProduct.IconMarginLeft = 0;
+            this.btnDeleteProduct.IconMarginRight = 0;
+            this.btnDeleteProduct.IconRightVisible = true;
+            this.btnDeleteProduct.IconRightZoom = 0D;
+            this.btnDeleteProduct.IconVisible = true;
+            this.btnDeleteProduct.IconZoom = 50D;
+            this.btnDeleteProduct.IsTab = false;
+            this.btnDeleteProduct.Location = new System.Drawing.Point(530, 442);
+            this.btnDeleteProduct.Name = "btnDeleteProduct";
+            this.btnDeleteProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.btnDeleteProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(71)))), ((int)(((byte)(87)))));
+            this.btnDeleteProduct.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDeleteProduct.selected = false;
+            this.btnDeleteProduct.Size = new System.Drawing.Size(116, 48);
+            this.btnDeleteProduct.TabIndex = 6;
+            this.btnDeleteProduct.Text = "      Delete";
+            this.btnDeleteProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteProduct.Textcolor = System.Drawing.Color.White;
+            this.btnDeleteProduct.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteProduct.Visible = false;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.btnDeleteProduct_Click);
+            // 
             // tabProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,6 +230,7 @@
             this.Name = "tabProduct";
             this.Size = new System.Drawing.Size(646, 656);
             this.Load += new System.EventHandler(this.tabProduct_Load);
+            this.panelShow.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -239,7 +242,7 @@
         private System.Windows.Forms.Panel panelMenu;
         private Bunifu.Framework.UI.BunifuFlatButton btnSearchProduct;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddProduct;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteProduct;
         private Bunifu.Framework.UI.BunifuFlatButton btnEditProduct;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteProduct;
     }
 }

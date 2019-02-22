@@ -11,28 +11,28 @@ using System.Data.SqlClient;
 
 namespace MartManagementSystem
 {
-    public partial class tabAddStock : UserControl
+    public partial class tabAddOnSale : UserControl
     {
 
         List<Product> products = new List<Product>();
         List<Product> addStocks = new List<Product>();
 
-        public tabAddStock()
+        public tabAddOnSale()
         {
             InitializeComponent();
         }
 
         // Form Load
-        private void tabAddStock_Load(object sender, EventArgs e)
+        private void tabAddOnSale_Load(object sender, EventArgs e)
         {
             ReadProduct();
             txtId.Focus();
             txtName.Enabled = false;
             txtQty.Enabled = false;
         }
-
+        
         // Form Leave
-        private void tabAddStock_Leave(object sender, EventArgs e)
+        private void tabAddOnSale_Leave(object sender, EventArgs e)
         {
             if (addStocks.Count > 0)
             {
@@ -264,7 +264,7 @@ namespace MartManagementSystem
                     SqlCommand command1;
                     SqlDataAdapter adapter1 = new SqlDataAdapter();
                     string sql = "";
-                    sql = "Update tbSaleDemo Set ProQty +=" + addStocks[i].qty + ",ProPrice =" + addStocks[i].price + ",ProName='" + addStocks[i].name + "' Where ProId = " + addStocks[i].id + "";
+                    sql = "Update tbSaleDemo Set ProQty +=" + addStocks[i].qty + ",ProPrice =" + addStocks[i].price + ",ProName=N'" + addStocks[i].name + "' Where ProId = " + addStocks[i].id + "";
                     command1 = new SqlCommand(sql, cnn1);
                     adapter1.InsertCommand = new SqlCommand(sql, cnn1);
                     adapter1.InsertCommand.ExecuteNonQuery();

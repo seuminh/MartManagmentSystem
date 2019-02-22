@@ -72,11 +72,11 @@
     <Compile Include="tabAddProduct.Designer.cs">
       <DependentUpon>tabAddProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="tabAddStock.cs">
+    <Compile Include="tabAddOnSale.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="tabAddStock.Designer.cs">
-      <DependentUpon>tabAddStock.cs</DependentUpon>
+    <Compile Include="tabAddOnSale.Designer.cs">
+      <DependentUpon>tabAddOnSale.cs</DependentUpon>
     </Compile>
     <Compile Include="tabDeleteProduct.cs">
       <SubType>UserControl</SubType>
@@ -125,8 +125,8 @@
     <EmbeddedResource Include="tabAddProduct.resx">
       <DependentUpon>tabAddProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tabAddStock.resx">
-      <DependentUpon>tabAddStock.cs</DependentUpon>
+    <EmbeddedResource Include="tabAddOnSale.resx">
+      <DependentUpon>tabAddOnSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tabDeleteProduct.resx">
       <DependentUpon>tabDeleteProduct.cs</DependentUpon>

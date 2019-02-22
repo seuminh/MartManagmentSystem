@@ -35,7 +35,7 @@
             this.btnExit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSale = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProduct = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAddStock = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddOnSale = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelShow = new System.Windows.Forms.Panel();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
@@ -53,7 +53,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.btnExit);
             this.bunifuGradientPanel1.Controls.Add(this.btnSale);
             this.bunifuGradientPanel1.Controls.Add(this.btnProduct);
-            this.bunifuGradientPanel1.Controls.Add(this.btnAddStock);
+            this.bunifuGradientPanel1.Controls.Add(this.btnAddOnSale);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.SlateBlue;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.BlueViolet;
@@ -170,40 +170,40 @@
             this.btnProduct.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
-            // btnAddStock
+            // btnAddOnSale
             // 
-            this.btnAddStock.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
-            this.btnAddStock.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddStock.BorderRadius = 0;
-            this.btnAddStock.ButtonText = "              Add Stock";
-            this.btnAddStock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddStock.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddStock.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddStock.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddStock.Iconimage")));
-            this.btnAddStock.Iconimage_right = null;
-            this.btnAddStock.Iconimage_right_Selected = null;
-            this.btnAddStock.Iconimage_Selected = null;
-            this.btnAddStock.IconMarginLeft = 0;
-            this.btnAddStock.IconMarginRight = 0;
-            this.btnAddStock.IconRightVisible = false;
-            this.btnAddStock.IconRightZoom = 0D;
-            this.btnAddStock.IconVisible = false;
-            this.btnAddStock.IconZoom = 90D;
-            this.btnAddStock.IsTab = true;
-            this.btnAddStock.Location = new System.Drawing.Point(0, 156);
-            this.btnAddStock.Name = "btnAddStock";
-            this.btnAddStock.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnAddStock.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
-            this.btnAddStock.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddStock.selected = true;
-            this.btnAddStock.Size = new System.Drawing.Size(266, 48);
-            this.btnAddStock.TabIndex = 0;
-            this.btnAddStock.Text = "              Add Stock";
-            this.btnAddStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStock.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.btnAddStock.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStock.Click += new System.EventHandler(this.btnAddStock_Click);
+            this.btnAddOnSale.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
+            this.btnAddOnSale.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddOnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddOnSale.BorderRadius = 0;
+            this.btnAddOnSale.ButtonText = "              Add On Sale";
+            this.btnAddOnSale.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddOnSale.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddOnSale.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddOnSale.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddOnSale.Iconimage")));
+            this.btnAddOnSale.Iconimage_right = null;
+            this.btnAddOnSale.Iconimage_right_Selected = null;
+            this.btnAddOnSale.Iconimage_Selected = null;
+            this.btnAddOnSale.IconMarginLeft = 0;
+            this.btnAddOnSale.IconMarginRight = 0;
+            this.btnAddOnSale.IconRightVisible = false;
+            this.btnAddOnSale.IconRightZoom = 0D;
+            this.btnAddOnSale.IconVisible = false;
+            this.btnAddOnSale.IconZoom = 90D;
+            this.btnAddOnSale.IsTab = true;
+            this.btnAddOnSale.Location = new System.Drawing.Point(0, 156);
+            this.btnAddOnSale.Name = "btnAddOnSale";
+            this.btnAddOnSale.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnAddOnSale.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(80)))), ((int)(((byte)(36)))), ((int)(((byte)(95)))));
+            this.btnAddOnSale.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddOnSale.selected = true;
+            this.btnAddOnSale.Size = new System.Drawing.Size(266, 48);
+            this.btnAddOnSale.TabIndex = 0;
+            this.btnAddOnSale.Text = "              Add On Sale";
+            this.btnAddOnSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddOnSale.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.btnAddOnSale.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddOnSale.Click += new System.EventHandler(this.btnAddOnSale_Click);
             // 
             // panelShow
             // 
@@ -240,7 +240,7 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAddStock;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddOnSale;
         private Bunifu.Framework.UI.BunifuFlatButton btnSale;
         private Bunifu.Framework.UI.BunifuFlatButton btnProduct;
         private System.Windows.Forms.Panel panelShow;

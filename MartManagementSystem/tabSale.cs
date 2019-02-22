@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace MartManagementSystem
 {
@@ -17,7 +18,10 @@ namespace MartManagementSystem
     {
         List<Product> sales = new List<Product>();
         double total = 0;
+        Thread t;
+        delegate void EnableButton(string text);
 
+      
         public tabSale()
         {
             InitializeComponent();
@@ -31,6 +35,7 @@ namespace MartManagementSystem
             dataGridView1.ClearSelection();
             lblDate.Text = "Date :" + DateTime.Now.ToShortDateString();
             txtTotal.Text = total.ToString();
+            tabLoading1.Visible = false;
         }
 
         // Button Save
@@ -39,7 +44,9 @@ namespace MartManagementSystem
             DialogResult result = MessageBox.Show("Are you sure that you want to save these data to excel?","Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
             if (result == DialogResult.Yes&&sales.Count>0)
             {
-                Save();
+                t = new Thread(Save);
+                t.Start();
+                tabLoading1.Visible = true;
             }
         }
 
@@ -101,10 +108,11 @@ namespace MartManagementSystem
             object misValue = System.Reflection.Missing.Value;
             xlWorkBook = xlApp.Workbooks.Add(misValue);
             xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            xlWorkSheet.Cells[2, 1] = "No";
             xlWorkSheet.Cells[2, 2] = "Name";
             xlWorkSheet.Cells[2, 3] = "Price";
             xlWorkSheet.Cells[2, 4] = "Qty";
-            xlWorkSheet.Cells[2, 5] = "Total";
+            xlWorkSheet.Cells[2, 5] = "Amount";
             int row = 3, col = 2;
             int len = sales.Count();
             for(int i = 0; i < len; i++)
@@ -118,7 +126,14 @@ namespace MartManagementSystem
             }
             xlWorkSheet.Cells[row+1, 4] = "Total";
             xlWorkSheet.Cells[row+1, 5] = total.ToString();
-            xlWorkBook.SaveAs(@"C:\Users\Admin\Desktop\" + today, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            try
+            {
+                xlWorkBook.SaveAs(@"C:\Users\Admin\Desktop\" + today, Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Filename is matched with other filename");
+            }
             xlWorkBook.Close(true, misValue, misValue);
             xlApp.Quit();
             Marshal.ReleaseComObject(xlWorkSheet);
@@ -141,9 +156,27 @@ namespace MartManagementSystem
             adapter.DeleteCommand.ExecuteNonQuery();
             command.Dispose();
             cnn.Close();
-            MessageBox.Show("Excel File has been created in Desktop","Information");
+            MessageBox.Show("Excel File has been created on Desktop","Information");
+
+            EnableButton1("true");
         }
+
+        // Enable Button and disable Loading
+        private void EnableButton1(string text)
+        {
+            if (btnSave.InvokeRequired)
+            {
+                EnableButton e = new EnableButton(EnableButton1);
+                Invoke(e, new object[] { text });
+            }
+            else
+            {
+                btnSave.Enabled = Convert.ToBoolean(text);
+                tabLoading1.Visible = false;
+            }
+        }
+
         #endregion
-        
+
     }
 }

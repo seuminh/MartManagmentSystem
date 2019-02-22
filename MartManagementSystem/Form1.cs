@@ -13,7 +13,7 @@ namespace MartManagementSystem
     public partial class MainForm : Form
     {
         tabProduct product;
-        tabAddStock addStock;
+        tabAddOnSale addStock;
         tabSale sale;
 
         public MainForm()
@@ -25,13 +25,13 @@ namespace MartManagementSystem
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            btnAddStock_Click(sender, e);
+            btnAddOnSale_Click(sender, e);
         }
 
-        private void btnAddStock_Click(object sender, EventArgs e)
+        private void btnAddOnSale_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            addStock = new tabAddStock();
+            addStock = new tabAddOnSale();
             panelShow.Controls.Add(addStock);
             addStock.BringToFront();
         }

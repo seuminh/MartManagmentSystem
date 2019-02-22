@@ -153,12 +153,13 @@ namespace MartManagementSystem
                     MartManagementSystem.Properties.Settings.Default.ProNoBarcode = proNoBarcode;
                     MartManagementSystem.Properties.Settings.Default.Save();
                 }
+                rdbNoBarcode.Checked = true;
                 Clear();
                 txtId.Focus();
             }
             catch (Exception)
             {
-                MessageBox.Show("Duplicate ID ");
+                MessageBox.Show("Duplicate ID","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             command.Dispose();
             cnn.Close();

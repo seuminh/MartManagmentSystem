@@ -37,12 +37,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tabLoading1 = new MartManagementSystem.tabLoading();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -137,7 +138,7 @@
             this.colName,
             this.colUnitPrice,
             this.colQty,
-            this.colTotal});
+            this.colAmount});
             this.dataGridView1.DoubleBuffered = true;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.HeaderBgColor = System.Drawing.Color.SeaGreen;
@@ -152,6 +153,32 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(549, 390);
             this.dataGridView1.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(260, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 22);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Monthly Sale";
+            // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // tabLoading1
+            // 
+            this.tabLoading1.AutoSize = true;
+            this.tabLoading1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tabLoading1.Location = new System.Drawing.Point(273, 238);
+            this.tabLoading1.Name = "tabLoading1";
+            this.tabLoading1.Size = new System.Drawing.Size(97, 97);
+            this.tabLoading1.TabIndex = 30;
             // 
             // colName
             // 
@@ -174,35 +201,19 @@
             this.colQty.ReadOnly = true;
             this.colQty.Width = 104;
             // 
-            // colTotal
+            // colAmount
             // 
-            this.colTotal.HeaderText = "Total";
-            this.colTotal.Name = "colTotal";
-            this.colTotal.ReadOnly = true;
-            this.colTotal.Width = 170;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(260, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 22);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Monthly Sale";
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this;
-            this.bunifuDragControl1.Vertical = true;
+            this.colAmount.HeaderText = "Amount";
+            this.colAmount.Name = "colAmount";
+            this.colAmount.ReadOnly = true;
+            this.colAmount.Width = 170;
             // 
             // tabSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.tabLoading1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label3);
@@ -226,10 +237,11 @@
         private System.Windows.Forms.Label lblDate;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridView1;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private tabLoading tabLoading1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colQty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTotal;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
     }
 }

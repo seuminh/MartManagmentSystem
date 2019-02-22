@@ -1,6 +1,6 @@
 ﻿namespace MartManagementSystem
 {
-    partial class tabAddStock
+    partial class tabAddOnSale
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabAddStock));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tabAddOnSale));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -413,8 +413,8 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "tabAddStock";
             this.Size = new System.Drawing.Size(646, 656);
-            this.Load += new System.EventHandler(this.tabAddStock_Load);
-            this.Leave += new System.EventHandler(this.tabAddStock_Leave);
+            this.Load += new System.EventHandler(this.tabAddOnSale_Load);
+            this.Leave += new System.EventHandler(this.tabAddOnSale_Leave);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduct)).EndInit();
